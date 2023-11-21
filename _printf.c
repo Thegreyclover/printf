@@ -1,8 +1,8 @@
 #include "main.h"
 /**
-* print_buffer - Outputs the content of the buffer if it's not empty
+* print_buffer - Prints the contents of the buffer
 * @buffer: Array of characters
-* @buff_ind: Index for the next character, representing the length
+* @buff_ind: Pointer to the index at which to add the next character
 */
 void print_buffer(char buffer[], int *buff_ind)
 {
@@ -11,9 +11,9 @@ write(1, &buffer[0], *buff_ind);
 *buff_ind = 0;
 }
 /**
-* _printf - Custom printf function to process formatted output
-* @format: The format string
-* Return: Number of characters printed
+* _printf - Custom printf function
+* @format: Format specifier string
+* Return: Number of characters printed (excluding null byte)
 */
 int _printf(const char *format, ...)
 {
